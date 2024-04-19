@@ -17,11 +17,11 @@ app.use('/', submit);
 app.use('/', portal);
 
 // Serve frontend files from the 'frontend/build' directory
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // For any other route, serve the 'index.html' file
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.post('/api/track-drive', async (req, res) => {
