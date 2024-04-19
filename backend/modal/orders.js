@@ -1,56 +1,93 @@
 const mongoose = require('mongoose');
-const model = require('../db/conn')
+const model = require('../db/conn');
 const orderSchema = new mongoose.Schema({
-  leadid_token:{
+  lead_token:{
+    type: String,
+    default: "3b0b8194d6844142b456e0d1b1867fac",
+  },
+  leadid_token: {
     type: String,
   },
-  ip_address:{
+  ip_address: {
     type: String,
   },
   fname: {
     type: String,
-    required: true
   },
   lname: {
     type: String,
-    required: true
   },
   phoneNo: {
     type: String,
-    required: true
   },
   email: {
     type: String,
-    required: true
   },
   city: {
     type: String,
-    required: true
   },
   state: {
     type: String,
-    required: true
   },
   address: {
     type: String,
-    required: true
   },
   zipCode: {
     type: String,
-    required: true
   },
   dob: {
     type: String,
-    required: true
   },
-  terms: {
+  source_url: {
+    type: String,
+  },
+  incident_date: {
+    type: String,
+  },
+  currently_represented: {
     type: Boolean,
-    required: true
+  },
+  needs_attorney: {
+    type: String,
+  },
+  person_at_fault: {
+    type: Boolean,
+  },
+  hospitalized_or_treated: {
+    type: Boolean,
+  },
+  currently_insured: {
+    type: Boolean,
+  },
+  injury_occurred: {
+    type: Boolean,
+  },
+  at_fault: {
+    type: Boolean,
+  },
+  traffic_source_id: {
+    type: String,
+    default: '11901',
+  },
+  currently_represented:{
+    type: String,
+  },
+  needs_attorney:{
+    type: String,
+  },
+  person_at_fault:{
+    type: Boolean,
+  },
+  hospitalized_or_treated:{
+    type: Boolean,
+  },
+  area_of_practice:{
+    type:String
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
 const Order = mongoose.model('Order', orderSchema);
