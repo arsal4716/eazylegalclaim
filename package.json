@@ -8,8 +8,7 @@
     "client-install": "npm install --prefix frontend",
     "client": "npm start --prefix frontend",
     "server": "nodemon backend/server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix accident-claim - Copy/frontend && npm run build --prefix accident-claim - Copy/frontend"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Your Name",
   "license": "ISC",
