@@ -1,0 +1,30 @@
+.banner {
+    display: flex;
+    background-color: yellow; /* Set the background color to yellow */
+    padding: 70px;
+  }
+  
+  .banner-left-side, .banner-right-side {
+    flex: 1; 
+  }
+.expert{
+    font-weight: bold;
+    text-align: center;
+}
+.prof , .injury{
+    text-align: center;
+    color: black;
+    font-size: 44px;
+}
+.injury{
+    font-weight: bold;
+}
+.hiring{
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 30px;
+    text-align: left;
+    margin-left: 50px;
+}

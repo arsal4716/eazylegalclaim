@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Adjust the width of the card */
+    margin: 10px; /* Add space around the card */
+  }
+  
+  .icon {
+    font-size: 24px; /* Adjust the font size of the icon */
+  }
+  
+  .heading {
+    font-size: 18px; /* Adjust the font size of the heading */
+    margin-top: 10px; /* Add space between the icon and the heading */
+  }
+  
+  .description {
+    font-size: 14px; /* Adjust the font size of the description */
+    text-align: center; /* Center-align the description */
+  }
+  
