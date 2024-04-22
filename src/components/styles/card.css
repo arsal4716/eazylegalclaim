@@ -4,12 +4,12 @@
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 300px; /* Adjust the width of the card */
-    margin: 10px; /* Add space around the card */
+    text-align: center;
+
 }
 
 .icon {
-    font-size: 24px; /* Adjust the font size of the icon */
+    font-size: 100px; /* Adjust the font size of the icon */
     margin-right: 20px; /* Add space between the icon and the content */
 }
 
@@ -19,20 +19,18 @@
 
 .heading {
     font-size: 18px; /* Adjust the font size of the heading */
-    margin: 0; /* Remove any default margins */
+    margin: 0; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 10px 0; /* Add space above and below the line */
-}
-
 .description {
-    font-size: 18px; /* Adjust the font size of the description */
-    color: white;
+    font-size: 30px; 
+    color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+.heartbeat-icon {
+    font-size: 3em; /* Increase size */
+    color: #1785DA; /* Change color to red */
+  }
+  

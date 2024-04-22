@@ -8,12 +8,13 @@
     padding: 100px;
   }
   h2{
-    font-size: 50px;
+    font-size: 40px;
     color: white;
   }
-p{
+.policy{
   font-size: 30px;
   color: white;
+  margin-top: 20px;
 }
   .right-side {
     flex: 1;
@@ -42,7 +43,7 @@ p{
    font-size:18px;
   }
   
-  input[type="text"]{
+  input[type="text"], [type ="date"], #incident_date{
     width: 100%; 
     height: 40px;
     margin-top: 10px;
@@ -63,9 +64,12 @@ input[type="checkbox"]{
   text-decoration: underline;
   cursor: pointer;
 }
-
-p{
-    margin-top: 10px;
-    text-align: center;
+.sub-btn{
+  width: 100%;
+  height: 45px;
+  background-color: #FFB105;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
 }
-  

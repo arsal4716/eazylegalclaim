@@ -1,6 +1,33 @@
 .main-card-container {
     display: flex;
     justify-content: space-evenly; 
+    flex-wrap: wrap;
     align-items: center; 
+    padding: 20px;
   }
+  .bg-main{
+    background-color: #FCB811;
+
+  }
+  .main-card-heading {
+    margin-top: 80px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.877);
+  }
+.card-container {
+  background-color: white; 
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+h2{
+  color: black;
+}
   

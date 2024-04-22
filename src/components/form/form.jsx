@@ -94,7 +94,7 @@ const Form = () => {
     <div className="container" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover' }}>
       <div className="left-side">
         <h2>Drive Worry-Free: Your Ultimate Coverage for Motor Vehicle Accidents</h2>
-        <p>
+        <p className='policy'>
         Manage Your Policy Anytime, Anywhere, with No Hassles
         </p>
       </div>
@@ -255,7 +255,7 @@ const Form = () => {
             </div>
 
             <input id="leadid_token" name="universal_leadid" type="hidden" value={formData.leadid_token}  />
-            <button type="submit">Submit</button>
+            <button className='sub-btn' type="submit">Submit</button>
           </form>
           <p>We promise your details are secure with us.</p>
         </div>

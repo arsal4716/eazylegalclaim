@@ -22,22 +22,18 @@ const PortalPage = () => {
 
   const handleTrackDriveClick = async (leadId) => {
     try {
-        console.log('Lead ID token:', leadId);
+      console.log('Lead ID token:', leadId);
+      const fetchDataResponse = await axios.get('http://localhost:3001/portal');
+      const newData = fetchDataResponse.data;
 
-        // Fetch the data again to ensure it's up to date
-        const fetchDataResponse = await axios.get('http://localhost:3001/portal');
-        const newData = fetchDataResponse.data;
+      console.log('New Data:', newData);
+      const leadData = newData.find(item => item._id === leadId);
+      console.log('Lead Data:', leadData);
 
-        // Find the lead data with the given leadId
-        const leadData = newData.find(item => item._id['$oid'] === leadId);
-        console.log('Lead Data:', leadData);
-
-        if (!leadData) {
-            console.error('Lead data not found for lead ID:', leadId);
-            return;
-        }
-
-        // Construct the request data to be sent to the Track Drive API
+      if (!leadData) {
+          console.error('Lead data not found for lead ID:', leadId);
+          return;
+      }
         const requestData = {
             lead_token: leadData.lead_token,
             caller_id: leadData.phoneNo,
@@ -147,8 +143,9 @@ const handleRTBClick = async (leadidToken) => {
               <td>{businessNumber[item._id['$oid']]}</td>
               <td>{publisherPayout[item._id['$oid']]}</td>
               <td>
-              <button className="button-link" onClick={() => handleTrackDriveClick(item)}>D1</button>
-              </td>
+  <button className="button-link" onClick={() => handleTrackDriveClick(item._id)}>D1</button>
+</td>
+
               <td>
               <button className="button-link" onClick={() => handleRTBClick(item._id['$oid'])}>D2</button>
               </td>
