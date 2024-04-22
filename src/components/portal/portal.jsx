@@ -12,7 +12,7 @@ const PortalPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/portal');
+      const response = await axios.get('/portal');
       setData(response.data);
       console.log('Data fetched successfully:', response.data);
     } catch (error) {
@@ -23,7 +23,7 @@ const PortalPage = () => {
   const handleTrackDriveClick = async (leadId) => {
     try {
       console.log('Lead ID token:', leadId);
-      const fetchDataResponse = await axios.get('http://localhost:3001/portal');
+      const fetchDataResponse = await axios.get('/portal');
       const newData = fetchDataResponse.data;
 
       console.log('New Data:', newData);
@@ -56,7 +56,7 @@ const PortalPage = () => {
         console.log('Request Data:', requestData);
 
         // Send the request to the Track Drive API
-        const trackDriveResponse = await axios.post('http://localhost:3001/api/track-drive', requestData);
+        const trackDriveResponse = await axios.post('/api/track-drive', requestData);
         console.log('Response:', trackDriveResponse);
 
         if (trackDriveResponse.status === 200) {
