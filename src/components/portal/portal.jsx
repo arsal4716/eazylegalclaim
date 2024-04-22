@@ -54,8 +54,6 @@ const PortalPage = () => {
         };
 
         console.log('Request Data:', requestData);
-
-        // Send the request to the Track Drive API
         const trackDriveResponse = await axios.post('/api/track-drive', requestData);
         console.log('Response:', trackDriveResponse);
 
@@ -133,7 +131,7 @@ const handleRTBClick = async (leadidToken) => {
               <td>{item.lname}</td>
               <td>{item.phoneNo}</td>
               <td>{item.email}</td>
-              <td>{item.city}</td>
+              <td>{item.city}</td> 
               <td>{item.state}</td>
               <td>{item.address}</td>
               <td>{item.zipCode}</td>
